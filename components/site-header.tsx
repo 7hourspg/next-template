@@ -1,17 +1,31 @@
 import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
-import { buttonVariants } from "@/components/ui/button"
+import { Button, buttonVariants } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 import { MainNav } from "@/components/main-nav"
 import { ThemeToggle } from "@/components/theme-toggle"
 
+import { SignUp } from "./auth/singn-up"
+import { Search } from "./search"
+
 export function SiteHeader() {
   return (
-    <header className="bg-background sticky top-0 z-40 w-full border-b">
+    <header className="sticky top-0 z-40 w-full bg-background">
       <div className="container flex h-16 items-center space-x-4 sm:justify-between sm:space-x-0">
+        {/* Logo */}
+        <Link href="/" className="flex items-center space-x-2">
+          <Icons.logo className="h-6 w-6" />
+          <span className="inline-block font-bold">{siteConfig.name}</span>
+        </Link>
+
+        {/* Navigaition */}
         <MainNav items={siteConfig.mainNav} />
-        <div className="flex flex-1 items-center justify-end space-x-4">
+
+        {/* External Links */}
+        <div className="flex items-center space-x-4">
+          <Search />
+
           <nav className="flex items-center space-x-1">
             <Link
               href={siteConfig.links.github}
@@ -30,6 +44,9 @@ export function SiteHeader() {
             </Link>
             <ThemeToggle />
           </nav>
+
+          {/* Sign Up */}
+          <SignUp />
         </div>
       </div>
     </header>

@@ -1,18 +1,33 @@
 export type SiteConfig = typeof siteConfig
 
 export const siteConfig = {
-  name: "Next.js",
+  name: "Ratatouille",
   description:
-    "Beautifully designed components built with Radix UI and Tailwind CSS.",
+    "A website for food lovers. Discover new recipes, learn about food culture, and more.",
   mainNav: [
     {
       title: "Home",
       href: "/",
     },
+    {
+      title: "Menu",
+      href: "/",
+    },
+    {
+      title: "About",
+      href: "/",
+    },
+    {
+      title: "Blog",
+      href: "/",
+    },
+    {
+      title: "Contact",
+      href: "/",
+    },
   ],
   links: {
-    twitter: "https://twitter.com/shadcn",
-    github: "https://github.com/shadcn/ui",
+    github: "https://github.com/7hourspg/next-template",
     docs: "https://ui.shadcn.com",
   },
 }
