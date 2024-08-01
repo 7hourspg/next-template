@@ -2,7 +2,7 @@ import "@/styles/globals.css"
 import { Metadata } from "next"
 
 import { siteConfig } from "@/config/site"
-import { fontSans, robotoSlab, rubik } from "@/lib/fonts"
+import { fontSans } from "@/lib/fonts"
 import { cn } from "@/lib/utils"
 import { SiteHeader } from "@/components/site-header"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
@@ -33,9 +33,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
         <body
           className={cn(
             "min-h-screen bg-background font-sans antialiased",
-            fontSans.variable,
-            robotoSlab.variable,
-            rubik.variable
+            fontSans.variable
           )}
         >
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
